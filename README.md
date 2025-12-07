@@ -21,6 +21,11 @@ The project also visualizes a **5-day temperature forecast** using Matplotlib, m
 - Clean, modular code structure for easy extension
 - No API key required
 
+Output Screenshot:
+
+
+<img width="457" height="237" alt="image" src="https://github.com/user-attachments/assets/b473bacf-ca64-4774-9a6f-ef413630721e" />
+
 ---
 
 ## 📦 Technologies Used
@@ -37,6 +42,8 @@ The project also visualizes a **5-day temperature forecast** using Matplotlib, m
 
 Install the required libraries:
 pip install requests matplotlib
+
+
 
 Clone this repository:
 
