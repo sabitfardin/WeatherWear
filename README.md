@@ -24,7 +24,8 @@ The project also visualizes a **5-day temperature forecast** using Matplotlib, m
 Output Screenshot:
 
 
-<img width="457" height="237" alt="image" src="https://github.com/user-attachments/assets/b473bacf-ca64-4774-9a6f-ef413630721e" />
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/b473bacf-ca64-4774-9a6f-ef413630721e" />
+<img width="500" height="300" alt="temperature_chart" src="https://github.com/user-attachments/assets/6b9741c9-6d4a-440a-a99e-90e10758c399" />
 
 ---
 
