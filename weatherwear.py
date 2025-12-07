@@ -2,17 +2,13 @@ import requests
 import matplotlib.pyplot as plt
 
 
-# -----------------------------
 # API endpoints (Open-Meteo)
-# -----------------------------
 
 GEOCODING_URL = "https://geocoding-api.open-meteo.com/v1/search"
 FORECAST_URL = "https://api.open-meteo.com/v1/forecast"
 
 
-# -----------------------------
 # Geocoding: city -> lat/lon
-# -----------------------------
 
 def geocode_city(city_name: str) -> dict:
     """
@@ -45,9 +41,6 @@ def geocode_city(city_name: str) -> dict:
     }
 
 
-# -----------------------------
-# Forecast: lat/lon -> current weather
-# -----------------------------
 
 def fetch_current_weather(lat: float, lon: float, units: str = "metric") -> dict:
     """
@@ -79,9 +72,6 @@ def fetch_current_weather(lat: float, lon: float, units: str = "metric") -> dict
     return current
 
 
-# -----------------------------
-# Helper: interpret weather code
-# -----------------------------
 
 def describe_weather_code(code: int) -> str:
     """
@@ -126,9 +116,6 @@ def fetch_forecast_5day(lat: float, lon: float, units: str = "metric"):
     data = resp.json()
     return data.get("daily", {})
 
-# -----------------------------
-# Analyze weather into labels
-# -----------------------------
 
 def create_temperature_chart(forecast_data, units: str = "metric"):
     """
@@ -220,10 +207,6 @@ def analyze_weather(current: dict, units: str = "metric") -> dict:
     }
 
 
-# -----------------------------
-# Clothing recommendation
-# -----------------------------
-
 def recommend_clothing(analysis: dict, context: str) -> str:
     """
     Given analyzed weather and context ('indoor' or 'outdoor'),
@@ -282,9 +265,6 @@ def recommend_clothing(analysis: dict, context: str) -> str:
     return " ".join(recs)
 
 
-# -----------------------------
-# Formatting the summary
-# -----------------------------
 
 def format_weather_summary(location_info: dict, analysis: dict) -> str:
     """
@@ -314,9 +294,8 @@ def format_weather_summary(location_info: dict, analysis: dict) -> str:
     return "\n".join(lines)
 
 
-# -----------------------------
 # Main program
-# -----------------------------
+
 
 def main():
     print("=== WeatherWear (Open-Meteo Edition) ===\n")
@@ -361,9 +340,7 @@ def main():
     print("\nClothing Recommendation:")
     print(recommendation)
 
-    # ---------------------------------------------------------
-    # ⭐ INSERTED TEMPERATURE CHART CODE GOES HERE
-    # ---------------------------------------------------------
+
     print("\nGenerating 5-day temperature chart for your presentation...")
     try:
         forecast_data = fetch_forecast_5day(
